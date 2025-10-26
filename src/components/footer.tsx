@@ -37,7 +37,7 @@ export default function Footer() {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://github.com/greatstackdev"
+              href="https://github.com/Sharonsunny619"
               className="hover:text-blue-600 transition-colors"
             >
               GitHub
@@ -47,7 +47,7 @@ export default function Footer() {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://linkedin.com/in/greatstackdev"
+              href="https://www.linkedin.com/in/sharon-sunny-542062383/"
               className="hover:text-blue-600 transition-colors"
             >
               LinkedIn
@@ -57,10 +57,10 @@ export default function Footer() {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://twitter.com/greatstackdev"
+              href="https://www.instagram.com/sharon_c_sunny/"
               className="hover:text-blue-600 transition-colors"
             >
-              Twitter
+              Instagram
             </a>
           </li>
         </ul>
