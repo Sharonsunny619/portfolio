@@ -18,7 +18,15 @@ const SkillItem = ({
   isActive: boolean;
   onHover: (index: number | null) => void;
 }) => {
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => setMounted(true), []);
+  const iconColor = mounted
+    ? resolvedTheme === "dark"
+      ? "rgb(80, 7, 36)"
+      : "rgb(252 244 255)"
+    : "currentColor";
 
   return (
     <motion.div
@@ -36,11 +44,7 @@ const SkillItem = ({
           isActive ? "shadow-md" : ""
         }`}
         animate={{
-          backgroundColor: isActive
-            ? theme === "dark"
-              ? "rgb(80, 7, 36)"
-              : "rgb(252 244 255)"
-            : "transparent",
+          backgroundColor: isActive ? iconColor : "transparent",
           transition: { duration: 0.5 },
         }}
         style={{
@@ -75,7 +79,7 @@ const SkillItem = ({
 export default function AboutMe() {
   const [activeSkills, setActiveSkills] = useState<number[]>([]);
   const [hoveredSkill, setHoveredSkill] = useState<number | null>(null);
-   useEffect(() => {
+  useEffect(() => {
     const activateRandomSkills = () => {
       const skillCount = Math.floor(Math.random() * 2) + 2;
       const selectedSkills = new Set<number>();
@@ -210,14 +214,14 @@ export default function AboutMe() {
           Frameworks & Tools I use
         </motion.h4>
 
-         <motion.h4
+        <motion.h4
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: 1.3, duration: 0.5 }}
           viewport={{ once: true }}
           className="mt-10 mb-4 text-gray-700 sm:hidden flex   min-[352px]:text-[22px] min-[510px]:text-3xl min-[1300px]:text-4xl  font-Ovo dark:text-white/80"
         >
-          Frameworks & Tools 
+          Frameworks & Tools
         </motion.h4>
 
         <div className="sm:grid  grid-cols-5 gap-4 mt-10  hidden">
