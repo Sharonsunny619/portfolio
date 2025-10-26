@@ -67,13 +67,13 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`w-full top-0 left-0 py-4 px-5 lg:px-8 xl:px-[8%] fixed flex items-center justify-between z-50 ${
+      className={`w-full top-0 left-0 ${resolvedTheme==="dark"?"pt-[6px] pb-4":"py-4 "} px-5 lg:px-8 xl:px-[8%] fixed flex items-center justify-between z-50 ${
         isScrolled?.scrolled
           ? "bg-white/20 dark:bg-darkTheme/20 backdrop-blur-md shadow-md"
           : ""
       }`}
     >
-      <a href="#top" className=" mt-2 ">
+      <a href="#top" className={` ${resolvedTheme==="dark"?"mt-2":""} `}>
         <Image
           src={mounted?resolvedTheme==="dark"?isScrolled?.scrolled? LogoDark2 :LogoDark:Logo:Logo}
           width={100}
