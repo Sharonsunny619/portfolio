@@ -1,10 +1,9 @@
 import React from "react";
 import { workData } from "./data";
 import Send from "./icons/send";
-import { ChevronLeft, ChevronRight, MoveRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "motion/react";
-import cognyn1 from "./images/project1/Screenshot 2025-10-22 at 4.26.45 PM.png";
-import Image from "next/image";
+ import Image from "next/image";
 
 export default function Work() {
   const [openModal, setOpenModal] = React.useState(false);

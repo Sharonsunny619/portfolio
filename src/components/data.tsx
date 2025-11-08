@@ -22,10 +22,13 @@ import GsapActive from "./icons/gsap_active";
 import FramerMotionActive from "./icons/framermotion_active";
 import StrapiCMSActive from "./icons/strapi_active";
 import SizzyActive from "./icons/sizzy_active";
-import cognyn1 from "./images/project1/Screenshot 2025-10-22 at 4.27.40 PM.png";
-import cognyn2 from "./images/project1/Screenshot 2025-10-22 at 4.26.45 PM.png";
-import cognyn3 from "./images/project1/Screenshot 2025-10-22 at 4.30.28 PM.png";
-import cognyn4 from "./images/project1/Screenshot 2025-10-22 at 4.27.19 PM.png";
+import deelbaba1 from "./images/project1/Screenshot 2025-11-08 at 8.13.08 PM.png";
+ import deelbaba3 from "./images/project1/Screenshot 2025-11-08 at 8.13.47 PM.png";
+import deelbaba4 from "./images/project1/Screenshot 2025-11-08 at 8.14.26 PM.png";
+import deelbaba5 from "./images/project1/Screenshot 2025-11-08 at 8.14.39 PM.png";
+import deelbaba6 from "./images/project1/Screenshot 2025-11-08 at 8.14.59 PM.png";
+import deelbaba7 from "./images/project1/Screenshot 2025-11-08 at 8.15.08 PM.png";
+
 import corporate1 from "./images/project2/Screenshot 2025-10-26 at 2.43.05 PM.png";
 import corporate2 from "./images/project2/Screenshot 2025-10-26 at 2.43.24 PM.png";
 import corporate3 from "./images/project2/Screenshot 2025-10-26 at 2.43.41 PM.png";
@@ -84,18 +87,18 @@ export const serviceData = [
 
 export const workData = [
   {
-    title: "Cognyn AI",
-    description: "AI chat bot with multiple models",
-    bgImage: [cognyn1,cognyn2,cognyn3,cognyn4],
-  },
-  {
     title: "Corporate Website",
     description: "Smart chatbot solutions for business",
     bgImage: [corporate1,corporate2,corporate3,corporate4],
   },
   {
+    title: "Deelbaba",
+    description: "Seamless Ecommerce Platform",
+    bgImage: [deelbaba1,deelbaba3,deelbaba4,deelbaba5,deelbaba6,deelbaba7],
+  },
+  {
     title: "Telematum Healthcare",
-    description: "Effortless online appointment booking",
+    description: "Effortless online appointments",
     bgImage: [Telematum1,Telematum2,Telematum3,Telematum4,Telematum5],
   },
 ];
