@@ -66,7 +66,7 @@ export default function Profile() {
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 1 }}
-          href="/SharonSunnyResume.pdf"
+          href="/Sharon-Sunny-Resume.pdf"
           download
           className="group relative inline-block w-[180px] h-[56px] cursor-pointer rounded-full border border-gray-500  overflow-hidden transition-all duration-500 ease-in z-[1]"
         >

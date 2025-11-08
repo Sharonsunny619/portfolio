@@ -9,17 +9,15 @@ import Work from "@/components/work";
 import React, { useEffect, useState } from "react";
 
 export default function HomePage() {
- 
- 
   return (
     <>
-      <Navbar   />
-      <Profile  />
-      <AboutMe  />
-      <Services  />
-      <Work  />
-      <Contact  />
-      <Footer  />
+      <Navbar />
+      <Profile />
+      <AboutMe />
+      <Services />
+      <Work />
+      <Contact />
+      <Footer />
     </>
   );
 }

@@ -32,7 +32,7 @@ export default function Services() {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       id="services"
-      className="w-full px-[12%] py-10 scroll-mt-20"
+      className="w-full px-[10%] md:px-[12%] py-10 scroll-mt-20"
     >
       {/* Header Section */}
       <motion.h4
@@ -73,7 +73,7 @@ export default function Services() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.9, delay: 0.6 }}
         viewport={{ once: true }}
-        className="grid grid-cols-1 md:grid-cols-2 gap-9 my-10"
+        className="grid grid-cols-1 min-[930px]:grid-cols-2 gap-9 my-10"
       >
         {serviceData.map(
           ({ icon, title, shortDescription, fullDescription }, index) => (
@@ -82,11 +82,12 @@ export default function Services() {
               ref={(el) => {
                 cardRefs.current[index] = el;
               }}
-              className="relative border  border-gray-400 rounded-lg px-8 py-10 overflow-hidden hover:shadow-black dark:hover:shadow-white cursor-pointer hover:bg-[#fcf4ff] dark:hover:bg-pink-950 transition-all duration-500 dark:hover:shadow-[4px_4px_0_#fff] hover:shadow-[4px_4px_0_#000]"
+              className={`relative border ${expandedIndex === index ? "min-[1490px]:h-[290px] min-[1260px]:h-[310px] min-[1096px]:h-[340px] min-[930px]:h-[380px] min-[688px]:h-[300px] min-[520px]:h-[330px] min-[430px]:h-[380px] min-[392px]:h-[420px] min-[362px]:h-[460px]  min-[330px]:h-[500px] min-[200px]:h-[530px]" : " " }   border-gray-400 rounded-lg px-5 min-[1260px]:px-8 py-10 overflow-hidden hover:shadow-black dark:hover:shadow-white cursor-pointer hover:bg-[#fcf4ff] dark:hover:bg-pink-950 transition-all duration-500 dark:hover:shadow-[4px_4px_0_#fff] hover:shadow-[4px_4px_0_#000]`}
             >
+              
               <div
                 className={`${
-                  title !== "Web Design" ? "" : "mt-1 p-2"
+                  title !== "Web Design" ? "" : "-mt-1 p-2"
                 } -mt-2 bg-pink-200 dark:bg-pink-900 w-min rounded-xl`}
               >
                 {icon}

@@ -12,7 +12,7 @@ export default function Footer() {
 
   React.useEffect(() => setMounted(true), []);
   return (
-    <div className="mt-20   w-full  ">
+    <div className="mt-20 w-full">
       <div className="text-center">
         <Image
           src={mounted ? (resolvedTheme === "dark" ? LogoDark : Logo) : Logo}
