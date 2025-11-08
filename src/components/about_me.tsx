@@ -5,8 +5,6 @@ import { infoList, skillList } from "./data";
 import { AnimatePresence, motion } from "motion/react";
 import { useTheme } from "next-themes";
 
-// Add this component above the main AboutMe component in the same file
-
 const SkillItem = ({
   skill,
   index,
@@ -31,10 +29,14 @@ const SkillItem = ({
   return (
     <motion.div
       whileHover={{ scale: 1.1 }}
-      initial={{ opacity: 0 }}
+      initial={{ opacity: 0, y: 20 }}
       viewport={{ once: true }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ 
+        duration: 0.5,
+        delay: index * 0.1, // Stagger delay based on index
+        ease: "easeOut"
+      }}
       className="flex flex-col items-center justify-center"
       onMouseEnter={() => onHover(index)}
       onMouseLeave={() => onHover(null)}
@@ -79,6 +81,7 @@ const SkillItem = ({
 export default function AboutMe() {
   const [activeSkills, setActiveSkills] = useState<number[]>([]);
   const [hoveredSkill, setHoveredSkill] = useState<number | null>(null);
+  
   useEffect(() => {
     const activateRandomSkills = () => {
       const skillCount = Math.floor(Math.random() * 2) + 2;
@@ -207,7 +210,7 @@ export default function AboutMe() {
         <motion.h4
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: 1.3, duration: 0.5 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
           viewport={{ once: true }}
           className="mt-10 mb-4 text-gray-700 sm:flex hidden text-[19px] min-[352px]:text-[22px] min-[510px]:text-3xl min-[1300px]:text-4xl  font-Ovo dark:text-white/80"
         >
@@ -217,7 +220,7 @@ export default function AboutMe() {
         <motion.h4
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: 1.3, duration: 0.5 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
           viewport={{ once: true }}
           className="mt-10 mb-4 text-gray-700 sm:hidden flex   min-[352px]:text-[22px] min-[510px]:text-3xl min-[1300px]:text-4xl  font-Ovo dark:text-white/80"
         >
@@ -331,7 +334,7 @@ export default function AboutMe() {
           />
         </div>
         <div className="sm:hidden  grid-cols-3 gap-4 mt-10  grid">
-          {/* Row 1: 1,null,2,3,null */}
+          {/* Row 1 */}
           <SkillItem
             skill={skillList[0]}
             index={0}
@@ -351,8 +354,7 @@ export default function AboutMe() {
             onHover={setHoveredSkill}
           />
 
-          {/* Row 2: null,4,5,null,null */}
-
+          {/* Row 2 */}
           <SkillItem
             skill={skillList[3]}
             index={3}
@@ -372,15 +374,13 @@ export default function AboutMe() {
             onHover={setHoveredSkill}
           />
 
-          {/* Row 3: 6,null,7,null,8 */}
-
+          {/* Row 3 */}
           <SkillItem
             skill={skillList[6]}
             index={6}
             isActive={isSkillActive(6)}
             onHover={setHoveredSkill}
           />
-
           <SkillItem
             skill={skillList[7]}
             index={7}
@@ -393,8 +393,8 @@ export default function AboutMe() {
             isActive={isSkillActive(8)}
             onHover={setHoveredSkill}
           />
-          {/* Row 4: 9,10,11,null,null */}
 
+          {/* Row 4 */}
           <SkillItem
             skill={skillList[9]}
             index={9}
@@ -414,15 +414,13 @@ export default function AboutMe() {
             onHover={setHoveredSkill}
           />
 
-          {/* Row 5: null,12,13,null,14 */}
-
+          {/* Row 5 */}
           <SkillItem
             skill={skillList[12]}
             index={12}
             isActive={isSkillActive(12)}
             onHover={setHoveredSkill}
           />
-
           <SkillItem
             skill={skillList[13]}
             index={13}
