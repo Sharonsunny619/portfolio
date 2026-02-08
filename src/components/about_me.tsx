@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import ProfileImage from "./images/WhatsApp Image 2025-09-06 at 12.38.55.jpeg";
+import ProfileImage from "./images/profile.jpg";
 import { infoList, skillList } from "./data";
 import { AnimatePresence, motion } from "motion/react";
 import { useTheme } from "next-themes";

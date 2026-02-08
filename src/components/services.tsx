@@ -62,7 +62,7 @@ export default function Services() {
         viewport={{ once: true }}
         className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
       >
-        I am a frontend developer from Thrissur, Kerala with 2.5+ years of
+        I am a frontend developer from Thrissur, Kerala with 2.10+ years of
         experience in creating responsive, high-performance web applications for
         clients across multiple industries.
       </motion.p>

@@ -1,7 +1,7 @@
 import { ArrowUpRight, Download } from "lucide-react";
 import Image from "next/image";
 import React from "react";
-import ProfileImage from "./images/WhatsApp Image 2025-09-06 at 12.38.55.jpeg";
+import ProfileImage from "./images/profile.jpg";
 import { motion } from "motion/react";
 
 export default function Profile() {
@@ -42,7 +42,7 @@ export default function Profile() {
           transition={{ duration: 0.6, delay: 0.7 }}
           className="max-w-2xl mx-auto   text-[14px] tracking-widest"
         >
-          I’m a frontend developer from Thrissur, Kerala, with 2.7+ years of
+          I’m a frontend developer from Thrissur, Kerala, with 2.10+ years of
           experience at companies including Gewan Infotech (Infopark) and
           Telematum Healthcare (Kochi).
         </motion.p>

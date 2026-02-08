@@ -3,8 +3,7 @@ import Education from "./icons/education";
 import Languages from "./icons/languages";
 import Projects from "./icons/projects";
 import UiUx from "./icons/uiux";
-import image2 from "./images/ecom.webp";
-import GithubInactive from "./icons/github_inactive";
+ import GithubInactive from "./icons/github_inactive";
 import GithubActive from "./icons/github_active";
 import ClerkActive from "./icons/clerk_active";
 import ZitadelActive from "./icons/zitadel_active";
@@ -29,10 +28,18 @@ import deelbaba5 from "./images/project1/Screenshot 2025-11-08 at 8.14.39 PM.p
 import deelbaba6 from "./images/project1/Screenshot 2025-11-08 at 8.14.59 PM.png";
 import deelbaba7 from "./images/project1/Screenshot 2025-11-08 at 8.15.08 PM.png";
 
-import corporate1 from "./images/project2/Screenshot 2025-10-26 at 2.43.05 PM.png";
-import corporate2 from "./images/project2/Screenshot 2025-10-26 at 2.43.24 PM.png";
-import corporate3 from "./images/project2/Screenshot 2025-10-26 at 2.43.41 PM.png";
-import corporate4 from "./images/project2/Screenshot 2025-10-26 at 2.43.59 PM.png";
+import corporate1 from "./images/project2/Screenshot 2026-02-08 at 12.33.11 PM.png";
+import corporate2 from "./images/project2/Screenshot 2026-02-08 at 12.33.48 PM.png";
+import corporate3 from "./images/project2/Screenshot 2026-02-08 at 12.34.16 PM.png";
+import corporate4 from "./images/project2/Screenshot 2026-02-08 at 12.34.28 PM.png";
+import corporate5 from "./images/project2/Screenshot 2026-02-08 at 12.34.52 PM.png";
+import corporate6 from "./images/project2/Screenshot 2026-02-08 at 12.35.28 PM.png";
+import corporate7 from "./images/project2/Screenshot 2026-02-08 at 12.35.48 PM.png";
+import corporate8 from "./images/project2/Screenshot 2026-02-08 at 12.36.07 PM.png";
+import corporate9 from "./images/project2/Screenshot 2026-02-08 at 12.36.29 PM.png";
+
+
+
 import Telematum1 from "./images/project3/Screenshot 2025-10-26 at 2.49.28 PM.png";
 import Telematum2 from "./images/project3/Screenshot 2025-10-26 at 2.49.43 PM.png";
 import Telematum3 from "./images/project3/Screenshot 2025-10-26 at 2.50.31 PM.png";
@@ -87,9 +94,9 @@ export const serviceData = [
 
 export const workData = [
   {
-    title: "Corporate Website",
-    description: "Smart chatbot solutions for business",
-    bgImage: [corporate1,corporate2,corporate3,corporate4],
+    title: "Nor-Tech IT Solutions",
+    description: "Networking and IT Solutions",
+    bgImage: [corporate1,corporate2,corporate3,corporate4,corporate5,corporate6,corporate7,corporate8,corporate9],
   },
   {
     title: "Deelbaba",
