@@ -119,17 +119,30 @@ export default function Work() {
 
     {/* Image */}
     <div className="relative w-[80vw] h-[80vh]">
-      <Image
-        src={currentProjectImages[currentIndex]}
-        alt="project"
-        fill
-        className="object-contain"
-      />
+      {currentProjectImages.map((src, index) => {
+        const isCurrent = currentIndex === index;
+        const isNext = (currentIndex + 1) % currentProjectImages.length === index;
+        const isPrev = (currentIndex - 1 + currentProjectImages.length) % currentProjectImages.length === index;
+
+        // Render current, next, and previous images for smoother navigation
+        if (!isCurrent && !isNext && !isPrev) return null;
+
+        return (
+          <Image
+            key={index}
+            src={src}
+            alt="project"
+            fill
+            className={`object-contain transition-opacity duration-300 ${isCurrent ? "opacity-100 z-10" : "opacity-0 z-0"}`}
+            priority
+          />
+        );
+      })}
 
       {/* Prev */}
       <button
         onClick={handlePrev}
-        className="absolute left-3 top-1/2 -translate-y-1/2 hover:bg-pink-200 bg-pink-50 cursor-pointer text-black text-5xl p-2 rounded-full"
+        className="absolute left-3 top-1/2 z-40 -translate-y-1/2 hover:bg-pink-200 bg-pink-50 cursor-pointer text-black text-5xl p-2 rounded-full"
       >
         <ChevronLeft/>
       </button>
@@ -137,7 +150,7 @@ export default function Work() {
       {/* Next */}
       <button
         onClick={handleNext}
-        className="absolute right-3 top-1/2 -translate-y-1/2 hover:bg-pink-200 bg-pink-50 cursor-pointer text-black text-5xl p-2 rounded-full"
+        className="absolute right-3 top-1/2 z-40 -translate-y-1/2 hover:bg-pink-200 bg-pink-50 cursor-pointer text-black text-5xl p-2 rounded-full"
       >
         <ChevronRight/>
       </button>
